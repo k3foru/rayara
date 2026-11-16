@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Rayara Tech — Enterprise automation, RPA and AI/ML engineering</title>
+<meta name="description" content="Rayara Tech builds enterprise automation, RPA and AI/ML systems and tells you which process should be a bot, a smarter bot or an agent.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&amp;family=Inter:wght@400;600&amp;display=swap">
+<style>
+body{margin:0;background:#F6F4EF}
+a{color:#8A5A12}a:hover{color:#5E3D0B}
+html{scroll-behavior:smooth}
+#brief label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600;color:#121A2B}
+#brief input,#brief select,#brief textarea{font:inherit;font-weight:400;font-size:16px;padding:12px 14px;border:1px solid #CFC8B8;border-radius:8px;background:#fff;color:#121A2B;min-height:44px;box-sizing:border-box;width:100%}
+#brief input:focus,#brief select:focus,#brief textarea:focus{outline:2px solid #121A2B;outline-offset:1px}
+#brief .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+#faq details{border-bottom:1px solid #CFC8B8;padding:18px 0}
+#faq summary{cursor:pointer;font-family:'Space Grotesk',Arial,sans-serif;font-size:1.2rem;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}
+#faq summary::-webkit-details-marker{display:none}
+#faq summary::after{content:"+";color:#8A5A12;font-size:1.5rem;line-height:1}
+#faq details[open] summary::after{content:"\2212"}
+#faq details p{margin:12px 0 0;line-height:1.65;color:#4A5568;max-width:760px}
+#totop{position:fixed;right:24px;bottom:24px;width:48px;height:48px;border-radius:50%;background:#E0A43A;color:#121A2B;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 14px rgba(18,26,43,.35);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s;z-index:50}
+#totop.show{opacity:1;visibility:visible;transform:none}
+#totop:hover{background:#F0B84F;color:#121A2B}
+@media (max-width:600px){#totop{right:16px;bottom:16px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}#totop{transition:none}}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #E0A43A;outline-offset:3px}
+</style>
+</helmet>
+<div style="font-family: 'Inter', Arial, sans-serif; color: #121A2B; background: #F6F4EF">
+
+<header style="background: #121A2B; color: #F6F4EF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 24px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="#top" style="font-family: 'Space Grotesk', Arial, sans-serif; font-weight: 700; font-size: 22px; letter-spacing: 0.18em; color: #E0A43A; text-decoration: none">RAYARA</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; font-size: 16px">
+<a href="#services" style="color: #D5DBE6; text-decoration: none">Services</a>
+<a href="#approach" style="color: #D5DBE6; text-decoration: none">Approach</a>
+<a href="#proof" style="color: #D5DBE6; text-decoration: none">Track record</a>
+<a href="#work" style="color: #D5DBE6; text-decoration: none">Work</a>
+<a href="#process" style="color: #D5DBE6; text-decoration: none">Process</a>
+<a href="#faq" style="color: #D5DBE6; text-decoration: none">FAQ</a>
+<a href="#contact" style="background: #E0A43A; color: #121A2B; font-weight: 600; padding: 12px 20px; border-radius: 8px; text-decoration: none; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Send a brief</a>
+</nav>
+</div>
+</header>
+
+<section id="top" style="background: #121A2B; color: #F6F4EF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px 120px; display: flex; flex-direction: column; gap: 28px">
+<p style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #E0A43A">Enterprise automation · RPA · AI/ML engineering</p>
+<h1 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: clamp(2.6rem, 6vw, 4.75rem); line-height: 1.04; letter-spacing: -0.02em; font-weight: 700; max-width: 900px">Keep the bots that work. Make the rest think.</h1>
+<p style="margin: 0; font-size: 1.3rem; line-height: 1.55; color: #B9C2D3; max-width: 720px">Rayara Tech helps automation teams decide, process by process, what stays as RPA, what gets machine learning inside it, and what becomes an AI agent — then builds it with cost, security and audit controls from day one.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; padding-top: 8px">
+<a href="#contact" style="background: #E0A43A; color: #121A2B; font-weight: 600; font-size: 17px; padding: 16px 28px; border-radius: 10px; text-decoration: none">Send a project brief</a>
+<a href="#services" style="border: 2px solid #3A4763; color: #F6F4EF; font-weight: 600; font-size: 17px; padding: 14px 26px; border-radius: 10px; text-decoration: none">See what we build</a>
+<p style="margin: 0; align-self: center; font-size: 15px; color: #B9C2D3">Taking new projects · replies within 24 hours</p>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="problem-h" style="background: #F6F4EF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 820px">
+<p style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #8A5A12">The question</p>
+<h2 id="problem-h" style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; font-weight: 600">Every automation estate now faces the same choice</h2>
+<p style="margin: 0; font-size: 1.15rem; line-height: 1.6; color: #4A5568">Bots are cheap to run but break on messy input. Agents handle judgment but add cost, risk and audit questions. Most teams are asked to “add AI” without a rule for which work goes where.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+<div style="flex: 1 1 300px; background: #FDFCF9; border: 1px solid #DCD6C9; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">Brittle bots</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568">Exceptions pile up wherever input is unstructured: emails, free-text notes, scanned or foreign-language documents.</p>
+</div>
+<div style="flex: 1 1 300px; background: #FDFCF9; border: 1px solid #DCD6C9; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">Ungoverned pilots</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568">Agent demos that call a paid model on every record, with no cost ceiling, no data controls and no audit trail.</p>
+</div>
+<div style="flex: 1 1 300px; background: #FDFCF9; border: 1px solid #DCD6C9; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">No decision rule</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568">Nobody can say, process by process, whether to keep the bot, add ML inside it, or rebuild it as an agent.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="services" aria-labelledby="services-h" style="background: #F6F4EF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 820px">
+<p style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #8A5A12">Services</p>
+<h2 id="services-h" style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; font-weight: 600">Enterprise automation, from first bot to governed agents</h2>
+<p style="margin: 0; font-size: 1.15rem; line-height: 1.6; color: #4A5568">Six ways to work together. Most engagements start with an assessment or a single-process pilot.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+<div style="flex: 1 1 300px; background: #FDFCF9; border: 1px solid #DCD6C9; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #8A5A12">Typically 4–12 weeks</p>
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">RPA build and migration</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568">New bots and platform migrations on UiPath, Automation Anywhere and Power Automate, plus custom automation where a platform is not the right fit, with proper logging, exception handling and handover.</p>
+</div><div style="flex: 1 1 300px; background: #FDFCF9; border: 1px solid #DCD6C9; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #8A5A12">Typically 4–8 weeks</p>
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">AI/ML inside automation</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568">Document extraction, classification, matching and prediction models embedded at the decision point of an existing bot, with confidence scores and human-review flags.</p>
+</div><div style="flex: 1 1 300px; background: #FDFCF9; border: 1px solid #DCD6C9; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #8A5A12">Typically 6–12 weeks</p>
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">Agentic workflows</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568">Planner and executor agents with memory, tool access and escalation to paid models only when confidence fails — every step logged.</p>
+</div><div style="flex: 1 1 300px; background: #FDFCF9; border: 1px solid #DCD6C9; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #8A5A12">Typically 2 weeks</p>
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">Automation assessment</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568">Every bot and candidate process rated keep, augment or go agentic, with ROI, run cost and a sequenced roadmap.</p>
+</div><div style="flex: 1 1 300px; background: #FDFCF9; border: 1px solid #DCD6C9; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #8A5A12">Scoped per system</p>
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">Enterprise integration</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568">SAP and other ERP integration, including SAP GUI automation, APIs, queues and legacy-system connectors so automations work with the systems you actually run.</p>
+</div><div style="flex: 1 1 300px; background: #FDFCF9; border: 1px solid #DCD6C9; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #8A5A12">Typically 2–6 weeks</p>
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">Rescue and optimise</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568">Failing bots, rising exception queues or runaway model spend: root-cause analysis, fixes and monitoring that keeps it fixed.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="approach" aria-labelledby="approach-h" style="background: #ECE8DF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 820px">
+<p style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #8A5A12">The Rayara Tech approach</p>
+<h2 id="approach-h" style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; font-weight: 600">One decision per process: keep, augment or go agentic</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+<div style="flex: 1 1 300px; background: #FDFCF9; border-radius: 14px; padding: 32px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #8A5A12">Keep as RPA</p>
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">Stable, rule-based work</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568">Structured input, fixed logic, few exceptions. Harden it, schedule it well and leave it alone.</p>
+</div>
+<div style="flex: 1 1 300px; background: #FDFCF9; border-radius: 14px; padding: 32px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #8A5A12">Augment with ML</p>
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">Bots that need judgment at one step</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568">Embeddings, rerankers or a trained model at the decision point, with confidence scores and human review flags.</p>
+</div>
+<div style="flex: 1 1 300px; background: #FDFCF9; border-radius: 14px; padding: 32px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #8A5A12">Go agentic</p>
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">Multi-step reasoning across systems</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568">Planner and executor agents with memory, escalating to a paid model only when confidence fails, and logging every step.</p>
+</div>
+</div>
+<p style="margin: 0; font-size: 1rem; color: #4A5568">Every recommendation comes with a measured run cost and an accuracy baseline, not a demo.</p>
+</div>
+</section>
+
+<section id="proof" aria-labelledby="proof-h" style="background: #121A2B; color: #F6F4EF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 820px">
+<p style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #E0A43A">Track record</p>
+<h2 id="proof-h" style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; font-weight: 600">Enterprise automation, measured</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 32px">
+<div style="flex: 1 1 200px; border-top: 3px solid #E0A43A; padding-top: 18px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 3rem; font-weight: 700; line-height: 1">75+</p>
+<p style="margin: 0; color: #B9C2D3">automations delivered across 10+ countries</p>
+</div>
+<div style="flex: 1 1 200px; border-top: 3px solid #E0A43A; padding-top: 18px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 3rem; font-weight: 700; line-height: 1">12+</p>
+<p style="margin: 0; color: #B9C2D3">enterprise clients in 6 industries</p>
+</div>
+<div style="flex: 1 1 200px; border-top: 3px solid #E0A43A; padding-top: 18px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 3rem; font-weight: 700; line-height: 1">7.5×</p>
+<p style="margin: 0; color: #B9C2D3">extraction precision gain over OCR alone (7.7% → 57.6%)</p>
+</div>
+<div style="flex: 1 1 200px; border-top: 3px solid #E0A43A; padding-top: 18px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 3rem; font-weight: 700; line-height: 1">$0.00023</p>
+<p style="margin: 0; color: #B9C2D3">measured AI cost per page</p>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+<div style="flex: 1 1 340px; background: #1C263B; border: 1px solid #2E3A54; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.25rem; font-weight: 600">Collections: four generations</h3>
+<p style="margin: 0; line-height: 1.6; color: #B9C2D3">The same promise-to-pay decision rebuilt from fixed rules, to local LLMs, to cloud-model escalation, to planner and executor agents with memory.</p>
+</div>
+<div style="flex: 1 1 340px; background: #1C263B; border: 1px solid #2E3A54; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.25rem; font-weight: 600">Governed AP platform</h3>
+<p style="margin: 0; line-height: 1.6; color: #B9C2D3">Multi-tenant procure-to-pay architecture: 14 services, 3 trust zones, PII tokenized before data leaves, hash-chained audit ledger, four jurisdictions.</p>
+</div>
+<div style="flex: 1 1 340px; background: #1C263B; border: 1px solid #2E3A54; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.25rem; font-weight: 600">ML inside bots</h3>
+<p style="margin: 0; line-height: 1.6; color: #B9C2D3">Cash application matching, GL code prediction with feedback retraining, multilingual invoice OCR and fuzzy matching served as an API.</p>
+</div>
+</div>
+<p style="margin: 0; font-size: 0.95rem; color: #B9C2D3">Delivered by the founder over ~19 years in prior roles, across banking, logistics, chemicals, automotive, credit ratings and healthcare. Finance operations is where the deepest case studies sit; the approach applies to any process-heavy function.</p>
+</div>
+</section>
+
+<section id="work" aria-labelledby="work-h" style="background: #ECE8DF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 820px">
+<p style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #8A5A12">Selected work</p>
+<h2 id="work-h" style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; font-weight: 600">70+ bots and AI systems, built over ~19 years</h2>
+<p style="margin: 0; font-size: 1.15rem; line-height: 1.6; color: #4A5568">Delivered across banking, logistics, credit ratings, healthcare, manufacturing and enterprise operations. Client names are withheld; details on request under NDA.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+
+<div style="flex: 1 1 340px; background: #FDFCF9; border: 1px solid #DCD6C9; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #8A5A12">Healthcare</p>
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">Claims extraction at scale</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568; flex: 1">Scanned claim forms (CMS-1500, UB-04) processed by a cascading pipeline: OCR first, then validation, with a vision model called only on fields that fail. A self-learning template cache cuts cost on repeat providers, and a review screen handles what is left.</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; font-weight: 600; border-top: 1px solid #DCD6C9; padding-top: 12px">Precision 7.7% → 57.6% · $0.00023 per page · CPU measured 3–4× faster than GPU</p>
+</div>
+
+<div style="flex: 1 1 340px; background: #FDFCF9; border: 1px solid #DCD6C9; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #8A5A12">Enterprise operations</p>
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">One scheduler to replace 50–60</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568; flex: 1">A central, YAML-driven job-orchestration service that replaced dozens of Windows Task Scheduler entries and installs as a Windows Service, giving one place for schedules, retries and monitoring.</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; font-weight: 600; border-top: 1px solid #DCD6C9; padding-top: 12px">One schedule, retries and monitoring in one place</p>
+</div>
+
+<div style="flex: 1 1 340px; background: #FDFCF9; border: 1px solid #DCD6C9; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #8A5A12">Banking and finance</p>
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">Semantic payment-to-customer matching</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568; flex: 1">Bank wire and ACH payments matched to customers with embeddings, cross-encoder reranking and entity recognition, so messy remittance text no longer breaks the bot.</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; font-weight: 600; border-top: 1px solid #DCD6C9; padding-top: 12px">Semantic matching · reranking · entity recognition</p>
+</div>
+
+<div style="flex: 1 1 340px; background: #FDFCF9; border: 1px solid #DCD6C9; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #8A5A12">Banking and finance</p>
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">GL-code prediction that learns</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568; flex: 1">An ensemble of gradient-boosted models plus embeddings predicts accounting codes, with a human-feedback loop that retrains the model from reviewer corrections.</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; font-weight: 600; border-top: 1px solid #DCD6C9; padding-top: 12px">Ensemble models · human-feedback retraining</p>
+</div>
+
+<div style="flex: 1 1 340px; background: #FDFCF9; border: 1px solid #DCD6C9; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #8A5A12">Documents</p>
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">Multilingual invoice processing</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568; flex: 1">Chinese and Japanese invoices read with OCR, translated, and regenerated as layout-preserving PDFs with per-invoice-type logic, running unattended as a packaged executable.</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; font-weight: 600; border-top: 1px solid #DCD6C9; padding-top: 12px">OCR · translation · unattended operation</p>
+</div>
+
+<div style="flex: 1 1 340px; background: #FDFCF9; border: 1px solid #DCD6C9; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #8A5A12">SAP and ERP</p>
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">Desktop SAP automation for AP</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568; flex: 1">Accounts-payable processing driven directly through SAP GUI across three iterations, with numbered exception flows so failures route to people instead of piling up.</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; font-weight: 600; border-top: 1px solid #DCD6C9; padding-top: 12px">SAP desktop automation · exception routing</p>
+</div>
+
+<div style="flex: 1 1 340px; background: #FDFCF9; border: 1px solid #DCD6C9; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #8A5A12">Logistics and EDI</p>
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">EDI, goods-receipt and delivery-proof reconciliation</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568; flex: 1">Invoice intake, goods-receipt and barcode-driven proof-of-delivery matching for a large logistics client, refined over several production iterations.</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; font-weight: 600; border-top: 1px solid #DCD6C9; padding-top: 12px">EDI · barcode · reconciliation</p>
+</div>
+
+<div style="flex: 1 1 340px; background: #FDFCF9; border: 1px solid #DCD6C9; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #8A5A12">Credit ratings data</p>
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">Email and data workflows for ratings teams</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568; flex: 1">Approval and dispute email handling, corporate-hierarchy building and loan-data processing for a credit-ratings workflow, plus date-based folder organisation from PDF content.</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; font-weight: 600; border-top: 1px solid #DCD6C9; padding-top: 12px">Email parsing · hierarchy validation · PDF extraction</p>
+</div>
+
+<div style="flex: 1 1 340px; background: #FDFCF9; border: 1px solid #DCD6C9; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #8A5A12">Banking and lending</p>
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">Loan-document scrutiny and portal automation</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568; flex: 1">Identity and loan documents checked with OCR and rule-based validation, and bank portal uploads automated end to end, including CAPTCHA handling.</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; font-weight: 600; border-top: 1px solid #DCD6C9; padding-top: 12px">OCR · rule-based checks · portal automation</p>
+</div>
+
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 48px">
+<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 12px">
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">Across the portfolio</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568">The wider catalogue, grouped by area.</p>
+</div>
+<div style="flex: 999 1 480px; min-width: 0; display: flex; flex-direction: column">
+<div style="display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid #CFC8B8; padding: 18px 0">
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.15rem; font-weight: 600">Document and identity</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568">Aadhaar redaction, ID and loan-document scrutiny, PDF and QR toolkits, summarisation, hospital-name and payment-reference extraction.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid #CFC8B8; padding: 18px 0">
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.15rem; font-weight: 600">Banking and finance</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568">Statement parsing, GL stamping and default coding, portal uploads, MIS reporting, task assignment and PO-line matching.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid #CFC8B8; padding: 18px 0">
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.15rem; font-weight: 600">Logistics, EDI and supply chain</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568">EDI intake, proof-of-delivery matching, airline passenger and meal-count reconciliation, shipment data extraction, file monitoring.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid #CFC8B8; padding: 18px 0">
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.15rem; font-weight: 600">Country-localised automation</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568">Market-specific invoice and document bots for China, Denmark, Luxembourg and Switzerland.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid #CFC8B8; padding: 18px 0">
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.15rem; font-weight: 600">Enterprise operations</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568">Server-hardening checks, trust and estate document automation, accounting-file downloads and merges, sales-order review, a .NET query tracker.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid #CFC8B8; padding: 18px 0">
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.15rem; font-weight: 600">Security and utilities</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568">Encryption utilities, delivery-report to accounting-journal automation, order and invoice automation for manufacturers.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 18px 0">
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.15rem; font-weight: 600">R&amp;D lab</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568">Agent and LLM experiments: multi-agent research and content generation, a voice collections agent, retrieval-augmented search over procurement news, commodity price forecasting, and an LLM pipeline that generates automated tests from plain-English prompts.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="process" aria-labelledby="process-h" style="background: #F6F4EF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 820px">
+<p style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #8A5A12">Process</p>
+<h2 id="process-h" style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; font-weight: 600">Four steps, no surprises</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+<div style="flex: 1 1 300px; background: #FDFCF9; border: 1px solid #DCD6C9; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 2.5rem; font-weight: 700; color: #E0A43A; line-height: 1">01</p>
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">Brief and call</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568; flex: 1">Send the brief. A 30-minute call confirms scope, systems and success measures.</p>
+<p style="margin: 0; font-size: 14px; font-weight: 600; color: #8A5A12">Day 1–3</p>
+</div><div style="flex: 1 1 300px; background: #FDFCF9; border: 1px solid #DCD6C9; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 2.5rem; font-weight: 700; color: #E0A43A; line-height: 1">02</p>
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">Assess</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568; flex: 1">Process walk-through, data check and a keep / augment / agentic decision with cost estimate.</p>
+<p style="margin: 0; font-size: 14px; font-weight: 600; color: #8A5A12">Week 1–2</p>
+</div><div style="flex: 1 1 300px; background: #FDFCF9; border: 1px solid #DCD6C9; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 2.5rem; font-weight: 700; color: #E0A43A; line-height: 1">03</p>
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">Build</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568; flex: 1">Iterative delivery with working demos, tests and an audit trail from the first sprint.</p>
+<p style="margin: 0; font-size: 14px; font-weight: 600; color: #8A5A12">Week 2–10</p>
+</div><div style="flex: 1 1 300px; background: #FDFCF9; border: 1px solid #DCD6C9; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 2.5rem; font-weight: 700; color: #E0A43A; line-height: 1">04</p>
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.35rem; font-weight: 600">Launch and run</h3>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #4A5568; flex: 1">Go-live, monitoring, documentation, handover — or an ongoing run-and-improve retainer.</p>
+<p style="margin: 0; font-size: 14px; font-weight: 600; color: #8A5A12">Ongoing</p>
+</div>
+</div>
+<p style="margin: 0; font-size: 1rem; color: #4A5568">Fixed quotes for defined scope. Client data and code stay with the client.</p>
+</div>
+</section>
+
+<section id="timezones" aria-labelledby="tz-h" style="background: #121A2B; color: #F6F4EF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 820px">
+<p style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #E0A43A">Time zones</p>
+<h2 id="tz-h" style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; font-weight: 600">Based in Bangalore, working with your hours</h2>
+<p style="margin: 0; font-size: 1.15rem; line-height: 1.6; color: #B9C2D3">Working-hours overlap for UK, EU, Gulf and US East Coast teams. Live local times below.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+<div style="flex: 1 1 220px; background: #1C263B; border: 1px solid #2E3A54; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #E0A43A">India</p>
+<p data-tz="Asia/Kolkata" style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 2.4rem; font-weight: 700; line-height: 1.1">--:--</p>
+<p style="margin: 0; font-size: 15px; color: #B9C2D3">Bangalore · IST</p>
+</div><div style="flex: 1 1 220px; background: #1C263B; border: 1px solid #2E3A54; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #E0A43A">Dubai</p>
+<p data-tz="Asia/Dubai" style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 2.4rem; font-weight: 700; line-height: 1.1">--:--</p>
+<p style="margin: 0; font-size: 15px; color: #B9C2D3">Near-full overlap</p>
+</div><div style="flex: 1 1 220px; background: #1C263B; border: 1px solid #2E3A54; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #E0A43A">UK / Europe</p>
+<p data-tz="Europe/London" style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 2.4rem; font-weight: 700; line-height: 1.1">--:--</p>
+<p style="margin: 0; font-size: 15px; color: #B9C2D3">Overlap through India afternoons</p>
+</div><div style="flex: 1 1 220px; background: #1C263B; border: 1px solid #2E3A54; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #E0A43A">US East</p>
+<p data-tz="America/New_York" style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 2.4rem; font-weight: 700; line-height: 1.1">--:--</p>
+<p style="margin: 0; font-size: 15px; color: #B9C2D3">Overlap through India evenings</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="faq" aria-labelledby="faq-h" style="background: #ECE8DF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px; display: flex; flex-wrap: wrap; gap: 48px">
+<div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #8A5A12">FAQ</p>
+<h2 id="faq-h" style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; font-weight: 600">Questions buyers ask first</h2>
+</div>
+<div id="faq" style="flex: 999 1 480px; min-width: 0">
+<details><summary>How much does a project cost?</summary><p>Fixed quotes for defined scope. An assessment is a short fixed-fee engagement; pilots and builds are quoted after the assessment so the number reflects real systems and volumes. Send a brief and you get a range within 24 hours.</p></details><details><summary>How long does a typical project take?</summary><p>Assessments take about two weeks. A single-process pilot usually runs 4–8 weeks; larger builds 8–12 weeks, delivered in working increments.</p></details><details><summary>Who owns the code and the bots?</summary><p>You do. Client data and code stay with the client, and accelerators are built fresh for each engagement.</p></details><details><summary>Do we have to replace our existing RPA platform?</summary><p>No. Most of the value comes from keeping bots that work and adding ML or agent steps only where judgment is needed.</p></details><details><summary>How do you handle security and sensitive data?</summary><p>Data stays inside your environment where required, PII is tokenized or masked before it reaches any external model, and agent actions are logged to an audit trail.</p></details><details><summary>Can you work with our team and time zone?</summary><p>Yes. Based in Bangalore, India with overlap for UK, EU, Gulf and US East Coast teams, and comfortable working inside your tools and meetings.</p></details><details><summary>What happens after go-live?</summary><p>You get documentation, tests and a handover. Many clients add a monthly run-and-improve retainer covering monitoring, retraining and the next process in the queue.</p></details>
+</div>
+</div>
+</section>
+
+<section id="partners" aria-labelledby="partners-h" style="background: #F6F4EF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px; display: flex; flex-wrap: wrap; gap: 48px">
+<div style="flex: 1 1 360px; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #8A5A12">For RPA and automation partners</p>
+<h2 id="partners-h" style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; font-weight: 600">Your agentic practice, without the hiring lead time</h2>
+<p style="margin: 0; font-size: 1.1rem; line-height: 1.6; color: #4A5568">Based in Bangalore, India, with working-hours overlap for UK, EU, Gulf and US East Coast teams.</p>
+</div>
+<div style="flex: 999 1 480px; min-width: 0; display: flex; flex-direction: column">
+<div style="display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid #CFC8B8; padding: 18px 0">
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.2rem; font-weight: 600">White-label delivery</h3>
+<p style="margin: 0; line-height: 1.6; color: #4A5568">We build under your brand, inside your methodology and your client relationship.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid #CFC8B8; padding: 18px 0">
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.2rem; font-weight: 600">Subcontracted delivery</h3>
+<p style="margin: 0; line-height: 1.6; color: #4A5568">You sell the assessment or pilot; we scope, build and hand over with documentation and tests.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid #CFC8B8; padding: 18px 0">
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.2rem; font-weight: 600">Architecture on call</h3>
+<p style="margin: 0; line-height: 1.6; color: #4A5568">Senior review of automation and agent designs, cost controls, data handling and audit trails before they reach production.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 18px 0">
+<h3 style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.2rem; font-weight: 600">Clean IP</h3>
+<p style="margin: 0; line-height: 1.6; color: #4A5568">Accelerators are built fresh for each engagement; client data and code stay with the client.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="about" aria-labelledby="about-h" style="background: #ECE8DF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px; display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+<div style="flex: 0 0 auto; width: 200px; height: 200px; border-radius: 16px; background: #121A2B; display: flex; align-items: center; justify-content: center; color: #E0A43A; font-family: 'Space Grotesk', Arial, sans-serif; font-weight: 700; font-size: 3.5rem; letter-spacing: 0.08em; box-sizing: border-box" role="img" aria-label="Kiran Kumar K monogram">KK</div>
+<div style="flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #8A5A12">Founder</p>
+<h2 id="about-h" style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.5rem); line-height: 1.15; font-weight: 600">Kiran Kumar K</h2>
+<p style="margin: 0; font-size: 1.1rem; line-height: 1.65; color: #4A5568">About 19 years across enterprise automation, RPA and AI/ML engineering — most recently as automation lead and technical architect on a multi-tenant procure-to-pay platform. Rayara Tech is the practice built from that work: governed, measured and honest about where an agent is not the answer.</p></div>
+</div>
+</section>
+
+<section id="contact" aria-labelledby="contact-h" style="background: #E0A43A; color: #121A2B">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px; display: flex; flex-wrap: wrap; gap: 48px">
+<div style="flex: 1 1 340px; display: flex; flex-direction: column; gap: 20px">
+<h2 id="contact-h" style="margin: 0; font-family: 'Space Grotesk', Arial, sans-serif; font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; font-weight: 700">What should we automate?</h2>
+<p style="margin: 0; font-size: 1.15rem; line-height: 1.6">Pick one process you’re unsure about. In two weeks you’ll know if it should be a bot, a smarter bot or an agent — and what it will cost to run.</p>
+<p style="margin: 0; font-size: 1rem; line-height: 1.6">Replies within 24 hours · Fixed quotes · Your code, your data</p>
+<p style="margin: 0; font-size: 1rem">Prefer email? <a href="mailto:k3foru@gmail.com" style="color: #121A2B; font-weight: 600">k3foru@gmail.com</a></p>
+</div>
+<div style="flex: 999 1 460px; min-width: 0; background: #FDFCF9; border-radius: 16px; padding: 32px">
+<form id="brief" style="display: flex; flex-direction: column; gap: 18px" novalidate>
+<label>I need help with<select name="type" required><option value="">Choose one…</option><option>Assessment: bot, smarter bot or agent?</option><option>New RPA build or migration</option><option>AI/ML inside existing automation</option><option>Agentic workflow</option><option>Enterprise / SAP integration</option><option>Fixing or optimising existing bots</option><option>Partnership / white-label delivery</option><option>Something else</option></select></label>
+<label>Tell us about the process<textarea name="details" rows="4" required placeholder="What is the process, what systems are involved, and what goes wrong today?"></textarea></label>
+<div style="display: flex; flex-wrap: wrap; gap: 18px">
+<div style="flex: 1 1 200px; display: flex; flex-direction: column"><label>Timeline<select name="timeline"><option>Not sure yet</option><option>Within 1 month</option><option>1–3 months</option><option>3+ months</option></select></label></div>
+<div style="flex: 1 1 200px; display: flex; flex-direction: column"><label>Budget range (optional)<select name="budget"><option>Prefer to discuss</option><option>Under $5k</option><option>$5k–$15k</option><option>$15k–$50k</option><option>$50k+</option></select></label></div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 18px">
+<div style="flex: 1 1 200px; display: flex; flex-direction: column"><label>Your name<input name="name" type="text" autocomplete="name" required></label></div>
+<div style="flex: 1 1 200px; display: flex; flex-direction: column"><label>Work email<input name="email" type="email" autocomplete="email" required></label></div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 18px">
+<div style="flex: 1 1 200px; display: flex; flex-direction: column"><label>Company<input name="company" type="text" autocomplete="organization"></label></div>
+<div style="flex: 1 1 200px; display: flex; flex-direction: column"><label>Your time zone / country<input name="zone" type="text" placeholder="e.g. UK, Dubai, US East"></label></div>
+</div>
+<div class="hp" aria-hidden="true"><label>Leave this empty<input name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
+<button type="submit" style="background: #121A2B; color: #F6F4EF; font: inherit; font-weight: 600; font-size: 17px; padding: 16px 28px; border-radius: 10px; border: 0; cursor: pointer; min-height: 48px">Send brief</button>
+<p id="brief-msg" role="status" style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A5568">This opens your email app with the brief filled in. Nothing is stored on this site.</p>
+</form>
+</div>
+</div>
+</section>
+
+<a id="totop" href="#top" aria-label="Back to top"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg></a>
+
+<footerstyle="background: #121A2B; color: #B9C2D3">
+<div style="max-width: 1200px; margin: 0 auto; padding: 32px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px">
+<p style="margin: 0">© 2026 Rayara Tech · Bangalore, India</p>
+<p style="margin: 0">Enterprise automation · RPA · AI/ML engineering</p>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4200}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+<script>
+(function(){
+function tick(){
+var els=document.querySelectorAll('[data-tz]');
+for(var i=0;i<els.length;i++){
+try{els[i].textContent=new Intl.DateTimeFormat([],{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:els[i].getAttribute('data-tz')}).format(new Date());}catch(e){}
+}
+}
+tick();setInterval(tick,1000);
+document.addEventListener('click',function(e){
+var t=e.target&&e.target.closest?e.target.closest('#totop'):null;
+if(!t)return;
+e.preventDefault();
+window.scrollTo({top:0,behavior:'smooth'});
+});
+function toggleTop(){
+var b=document.getElementById('totop');
+if(!b)return;
+if((window.pageYOffset||document.documentElement.scrollTop)>600){b.classList.add('show');}else{b.classList.remove('show');}
+}
+window.addEventListener('scroll',toggleTop,{passive:true});
+setInterval(toggleTop,500);
+document.addEventListener('submit',function(e){
+var f=e.target;
+if(!f||f.id!=='brief')return;
+e.preventDefault();
+var msg=document.getElementById('brief-msg');
+var d=new FormData(f);
+if(d.get('website')){return;}
+var need=['type','details','name','email'];
+for(var i=0;i<need.length;i++){
+if(!String(d.get(need[i])||'').trim()){msg.textContent='Please fill in the required fields: what you need, the process, your name and email.';msg.style.color='#9B1C1C';var el=f.elements[need[i]];if(el)el.focus();return;}
+}
+var body=['Type: '+d.get('type'),'Timeline: '+d.get('timeline'),'Budget: '+d.get('budget'),'Name: '+d.get('name'),'Email: '+d.get('email'),'Company: '+(d.get('company')||'-'),'Time zone: '+(d.get('zone')||'-'),'','Process:',d.get('details')].join('\n');
+var subj='Project brief from '+d.get('name');
+msg.style.color='#4A5568';
+msg.textContent='Opening your email app… if nothing happens, email k3foru@gmail.com with the same details.';
+window.location.href='mailto:k3foru@gmail.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+});
+})();
+</script>
+</body>
+</html>
